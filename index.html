@@ -54,6 +54,31 @@
   animation-name: fadeIn
 }
 
+/*----------------渐变-----------------*/
+
+		.title{
+             position: fixed;
+             top: 0;
+             left: 0;
+             padding: 25px 100px;
+             width: 100%;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             text-align: center;
+			 z-index:999;
+            transition:  0.5s;
+         }
+
+          
+        .top_mask{
+            padding: 25px 100px;
+            background-image: linear-gradient(to bottom, rgb(214, 214, 214), rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0));
+			z-index: 999;
+        }
+
+
+
 	/*-----------------------------------------------*/
 
 	video.header-vid {
@@ -178,46 +203,16 @@
 	<br>
 	<!--<audio src="./resources/Infinite_Being.mp3" id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>-->
 	<center>
-		<div class="fadeIn animated" >
-		<span style="font-size:36px"><b>Personal Homepage</b></span>
-		</div>
-		<table align=center width=600px>
-		<!--<table align=center width=600px>
-				<tr>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
-						</center>
-					</td>
-					<td align=center width=100px>
-						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
-						</center>
-					</td>
-				</tr>
-			</table>
-			
-			<table align=center width=250px>
-				<tr>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
-						</center>
-					</td>
-					<td align=center width=120px>
-						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
-						</center>
-					</td>
-				</tr>
-			</table>-->
-		</table>
+
+		    <div class="title">
+
+				<span style="font-size:36px"><b>Personal Homepage</b></span>
+		  
+			</div>
+
 	</center>
+	<br>
+	<br>
 	<br>
 	<br>
 	<center>
@@ -247,6 +242,8 @@
 				</td>
 			</tr>
 		</table>
+		<br>
+		<br>
 
 	</center>
 
@@ -281,28 +278,34 @@
 	<br>
 
 	<hr>
-	<div class="fadeIn animated" >
-	<center><h1><b>Research Experience</b></h1></center>
-	</div>
 
-	<table align=center width=800px>
-		<br>
-		<tr>
+	<table align=center width=900px>
 		<div class="fadeIn animated" >
-			<p><b>Sep 2020 -- Mar 2023</b> </p>
-			<p><b>Lab of Cryptology and Computer Security (LoCCS)</b></p>
-			<p>Supervisor:<b> Dawu Gu </b>(Distinguished Professor, Shanghai Jiao Tong University).</p> 
-			<p>-- I graduated from Southeast University with a B.Eng in information engineering and joined the Lab of Cryptology and Computer Security in September 2020. During the last 2 years, I mainly focused on the side-channel analysis of IoT devices and cryptography.</p>
-			<p>-- In 2021, I was assigned as the group leader of the "wireless side-channel analysis" and reproduced the "Screaming Channel Attack" proposed in 2018. To enhance the original wireless side-channel analysis method, I proposed a new method using a self-made repeater and signal processing methods, which has been concluded in the paper 'Wireless Side-channel Analysis Method Based on Repeater'.</p>
-			<p>-- I have research experience in cross-device side-channel analysis. I cooperated with my senior Mr.Pei Cao, built the signal sampling system, and published the paper 'AL-PA: cross-device profiled side-channel attack using adversarial learning' as the second author in 2022.</p>
-			<p>-- I took part in the project 'ATHENa'and accomplished the LWC side-channel security evaluation on Ascon. In this project, I used power side-channel analysis to inspect whether there is any information leakage in the lightweight cryptography algorithm Ascon. The evaluation report of the Ascon has been accepted by the official websites of 'ATHENa'. </p>
-			<br>
-			<p><b>August 2023 -- Now</b></p>
-			<p><b>SYmmetric cryptography and machine Learning Lab (SyLLab)</b></p>
-			<p>Supervisor:<b> PEYRIN Thomas</b>  (Professor, Nanyang Technological University).</p> 
+			<center><h1><b>Research Experience</b></h1></center>
 		</div>
+
+	
+		<tr>
+		<td>
+			<div class="fadeIn animated" >
+				<p><b>Sep 2020 -- Mar 2023</b> </p>
+				<p><b>Lab of Cryptology and Computer Security (LoCCS)</b></p>
+				<p>Supervisor:<b> Dawu Gu </b>(Distinguished Professor, Shanghai Jiao Tong University).</p> 
+				<p>-- I graduated from Southeast University with a B.Eng in information engineering and joined the Lab of Cryptology and Computer Security in September 2020. During the last 2 years, I mainly focused on the side-channel analysis of IoT devices and cryptography.</p>
+				<p>-- In 2021, I was assigned as the group leader of the "wireless side-channel analysis" and reproduced the "Screaming Channel Attack" proposed in 2018. To enhance the original wireless side-channel analysis method, I proposed a new method using a self-made repeater and signal processing methods, which has been concluded in the paper 'Wireless Side-channel Analysis Method Based on Repeater'.</p>
+				<p>-- I have research experience in cross-device side-channel analysis. I cooperated with my senior Mr.Pei Cao, built the signal sampling system, and published the paper 'AL-PA: cross-device profiled side-channel attack using adversarial learning' as the second author in 2022.</p>
+				<p>-- I took part in the project 'ATHENa'and accomplished the LWC side-channel security evaluation on Ascon. In this project, I used power side-channel analysis to inspect whether there is any information leakage in the lightweight cryptography algorithm Ascon. The evaluation report of the Ascon has been accepted by the official websites of 'ATHENa'. </p>
+				<br>
+				<p><b>August 2023 -- Now</b></p>
+				<p><b>SYmmetric cryptography and machine Learning Lab (SyLLab)</b></p>
+				<p>Supervisor:<b> PEYRIN Thomas</b>  (Professor, Nanyang Technological University).</p> 
+			</div>
+		</td>
 		</tr>
 	</table>
+	<br>
+
+
 	<hr>
 	<div class="fadeIn animated" >
 	<center><h1><b>Publication</b></h1></center>
@@ -401,6 +404,21 @@
 	</table>
 
 <br>
+<!------------------------------------------------------new script   -------------------------------------->
+<script>
+	window.addEventListener('scroll',function(){
+		let tou = document.querySelector('.title');
+		
+	   
+	   /*  tou.classList.toggle("bian",window.scrollY>0); */
+	   if(window.scrollY>0)
+		{
+			tou.classList.add("top_mask");
+		}else{
+			tou.classList.remove("top_mask");
+		}
+	})
+</script>
 </body>
 </html>
 
