@@ -15,15 +15,46 @@
 		font-size:32px;
 		font-weight:300;
 	}
-	
-	.disclaimerbox {
-		background-color: #eee;		
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
+
+	/*-------------------------special effects----------------------*/
+/*base code*/
+.animated {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+/*the animation definition*/
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn
+}
+
+	/*-----------------------------------------------*/
 
 	video.header-vid {
 		height: 140px;
@@ -145,7 +176,9 @@
 <body>
 	<br>
 	<center>
+		<div class="fadeIn animated" >
 		<span style="font-size:36px"><b>Personal Homepage</b></span>
+		</div>
 		<table align=center width=600px>
 		<!--<table align=center width=600px>
 				<tr>
@@ -190,21 +223,23 @@
 			<tr>
 				<td width=260px>
 					<center>
-						<img class="round" style="float: left; width:500px" src="./resources/zhy_img.jpg"/>
+						<div class="fadeIn animated" >
+							<img class="round" style="float: left; width:500px" src="./resources/zhy_img.jpg"/>
+						</div>
+
 					</center>
 				</td>
 				<td>
-					<p style="margin-left: 60px;width: 500px;font-size:20px;">   Hi, I am Zhang Hongyi!</p>
-					<p style="margin-left: 60px;width: 500px;font-size:20px;">  I am a Ph.D. student at Nanyang Technological University, researching lightweight symmetric ciphers. </p>
-					<p style="margin-left: 60px;width: 500px;font-size:20px;">I also have experience in circuit design and hardware security. 
-					<br>
-					
-					<p style="margin-left: 60px;width: 500px;font-size:20px;"><b>Contact :</b></p>
-					<p style="margin-left: 60px;width: 500px;">Division of Mathematical Sciences<br>
-					School of Physical and Mathematical Sciences<br>
-					Nanyang Technological University<br>
-					SPMS-MAS-04-01, 21 Nanyang Link, Singapore 637371, Singapore</p>
-					<p style="margin-left: 60px;width: 500px;"><b>E-MAIL: </b>hongyi003@e.ntu.edu.sg</p>
+					<div class="fadeIn animated" >
+						<p style="margin-left: 60px;width: 500px;font-size:20px;">   Hi, I am Zhang Hongyi!</p>
+						<p style="margin-left: 60px;width: 500px;font-size:20px;">  I am a Ph.D. student at Nanyang Technological University, researching lightweight symmetric ciphers. </p>
+						<p style="margin-left: 60px;width: 500px;font-size:20px;">I also have experience in circuit design and hardware security. 
+						<br>
+						<br>
+						<p style="margin-left: 60px;width: 500px;font-size:16px;"><b>Contact :<br><br>
+						SPMS-MAS-04-01, 21 Nanyang Link, Singapore 637371, Singapore</b></p>
+						<p style="margin-left: 60px;width: 500px;font-size:16px;"><b>E-MAIL:  hongyi003@e.ntu.edu.sg</b></p>
+					</div>
 
 
 				</td>
@@ -216,30 +251,37 @@
 	<hr>
 
 	<table align=center width=850px>
-		<center><h1><b>Eduaction</b></h1></center>
-		<tr>
-			<td>
-				<p>2016 -- 2020 </p>
-				<p>Southeast University (985 University in China) -- Nanjing, China </p>
-				<p>B.Eng in Information Engineering</p>
-				<p>GPA: 3.88/4, Ranked as 7/255 </p>
-				<br>
-				<p>2020 -- 2023</p>
-				<p>Shanghai Jiao Tong University (Ranked Top 3 in China) -- Shanghai, China </p>
-   				<p>M.S in Cyber Security</p>
-				<p>GPA: 3.88/4, Ranked as 2/28</p>
-			</td>
-		</tr>
+		<div class="fadeIn animated" >
+			<center><h1><b>Eduaction</b></h1></center>
+		</div>
+			<tr>
+				<td>
+					<div class="fadeIn animated" >
+					<p>2016 -- 2020 </p>
+					<p><b>Southeast University (985 University in China)</b> -- Nanjing, China </p>
+					<p>B.Eng in Information Engineering</p>
+					<p>GPA: 3.88/4, Ranked as 7/255 </p>
+					<br>
+					<p>2020 -- 2023</p>
+					<p><b>Shanghai Jiao Tong University (Ranked Top 3 in China)</b> -- Shanghai, China </p>
+					<p>M.S in Cyber Security</p>
+					<p>GPA: 3.88/4, Ranked as 2/28</p>
+				</div>
+				</td>
+			</tr>
+
 	</table>
 	<br>
 
 	<hr>
+	<div class="fadeIn animated" >
 	<center><h1><b>Research Experience</b></h1></center>
-	
+	</div>
 
 	<table align=center width=800px>
 		<br>
 		<tr>
+		<div class="fadeIn animated" >
 			<p>Sep 2020 -- Mar 2023 </p>
 			<p>Lab of Cryptology and Computer Security (LoCCS)</p>
 			<p>Supervisor: Dawu Gu (Distinguished Professor, Shanghai Jiao Tong University).</p> 
@@ -250,16 +292,18 @@
 			<br>
 			<p>August 2023 -- Now</p>
 			<p>SYmmetric cryptography and machine Learning Lab (SyLLab)</p>
+		</div>
 		</tr>
 	</table>
 	<hr>
-
+	<div class="fadeIn animated" >
 	<center><h1><b>Publication</b></h1></center>
-
+	</div>
 	<table align=center width=920px>
 		<center>
 			<tr>
 				<td>
+					<div class="fadeIn animated" >
 					<p><b>1. AL-PA: cross-device profiled side-channel attack using adversarial learning</b></p>
 					<p>  Pei Cao, <b>Hongyi Zhang</b>, Dawu Gu, Yan Lu, and Yidong Yuan.</p>
 					<p>  DAC 2022: Proceedings of the 59th ACM/IEEE Design Automation Conference</p>
@@ -271,6 +315,7 @@
 					<p><b>3. Wireless Side-Channel Analysis Method Based on Spectral Addition</b></p>
 					<p><b>  ZHANG H Y</b>, GU D W, Cao P, Qu S P, Li X W.</p>
 					<p>  Journal of Cryptologic Research, 2023,10(4):862-878.</p>
+				</div>
 				</td>
 			</tr>
 		</center>
@@ -278,10 +323,13 @@
 	<br>
 	<hr>
 	<table align=center width=850px>
-		<center><h1><b>Honors and Awards</b></h1></center>
+		<div class="fadeIn animated" >
+			<center><h1><b>Honors and Awards</b></h1></center>
+		</div>
 		<tr>
-			<td><a href=""><img class="layered-paper-big" style="height:275px" src="./resources/11.png"/></a></td>
+			<td><div class="fadeIn animated" ><a href=""><img class="layered-paper-big" style="height:275px" src="./resources/11.png"/></a></div></td>
 			<td>
+				<div class="fadeIn animated" >
 				<span style="font-size:14pt">Dec 2022<br>
 					<b>Shanghai Outstanding Graduates</b><br>
 				</span>
@@ -304,7 +352,7 @@
 					<b>National Scholarship for Undergraduate Students</b><br>
 					(Highest honor for Chinese undergraduate students)<br>
 				</span>
-
+				</div>
 			</td>
 		</tr>
 	</table>
