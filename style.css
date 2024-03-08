@@ -225,7 +225,7 @@ li {
   display: none;
 }
 .tab_list li:hover{
-  background-color: rgba(182, 182, 182, 0.411);
+  background-color: rgba(182, 182, 182, 0.211);
 }
 
 .tab_list a:hover{
