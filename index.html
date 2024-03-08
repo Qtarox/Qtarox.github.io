@@ -32,6 +32,25 @@
 				<span style="font-size:36px"><b>Personal Homepage</b></span>
 		  
 			</div>
+			<div>
+				<!-- 设置菜单栏 -->
+				<div class="tab_list">
+					<ul>
+						<li><a href="#c" style="font-size:18px"><b>Honors and Awards</b></a></li>
+						<li><a href="#b" style="font-size:18px"><b> Skills</b></a></li>
+						<li><a href="#a" style="font-size:18px"><b>Research Experience</b></a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- 设置内容 -->
+				<!-- <div class="tab_con">
+					<div class="item">规格与包装的内容</div>
+					<div class="item">售后保障的内容</div>
+					<div class="item">商品评价的内容</div>
+					<div class="item">手机社区的内容</div>
+				</div> -->
+			</div>
 
 	</center>
 	<br>
@@ -91,8 +110,8 @@
 					<br>
 					<p><b>2023 -- Now</b></p>
 					<p><b>Nanyang Technological University</b> -- Singapore, Singapore </p>
-					<p>Ph.D. in Math</p>
-					<p>CGPA: 5.0/5.0</p>
+					<p id="a">Ph.D. in Math</p>
+					<p >CGPA: 5.0/5.0</p>
 				</div>
 				</td>
 			</tr>
@@ -148,7 +167,7 @@
 					<br>
 					<p><b>3. Wireless Side-Channel Analysis Method Based on Spectral Addition</b></p>
 					<p><b>  ZHANG H Y</b>, GU D W, Cao P, Qu S P, Li X W.</p>
-					<p>  Journal of Cryptologic Research, 2023,10(4):862-878.</p>
+					<p id="c">  Journal of Cryptologic Research, 2023,10(4):862-878.</p>
 				</div>
 				</td>
 			</tr>
@@ -182,7 +201,7 @@
 					<b>Outstanding graduates of Southeast University</b><br>
 				</span>
 				<br>
-				<span style="font-size:14pt">Nov 2018<br>
+				<span style="font-size:14pt" id="b">Nov 2018<br>
 					<b>National Scholarship for Undergraduate Students</b><br>
 					(Highest honor for Chinese undergraduate students)<br>
 				</span>
@@ -192,6 +211,42 @@
 	</table>
 	<br>
 
+	<hr>
+	<table align=center width=850px>
+		<div class="fadeIn animated" >
+			<center><h1><b>Competition Awards</b></h1></center>
+		</div>
+		<tr>
+			<td><div class="fadeIn animated" ><a href=""><img class="layered-paper-big" style="height:275px" src="./resources/12.jpg"/></a></div></td>
+			<td>
+				<div class="fadeIn animated" >
+				<span style="font-size:14pt">Dec 2022<br>
+					<b>Shanghai Outstanding Graduates</b><br>
+				</span>
+				<br>
+
+				<span style="font-size:14pt">Oct 2022<br>
+					<b>National Scholarship for Postgraduate Students</b><br>
+					(Highest honor for Chinese post-graduate students)<br>
+				</span>
+				<br>
+				<span style="font-size:14pt">Nov 2021<br>
+					<b>Shanghai Jiao Tong University Huawei Scholarship</b><br>
+				</span>
+				<br>
+				<span style="font-size:14pt">Jun 2020<br>
+					<b>Outstanding graduates of Southeast University</b><br>
+				</span>
+				<br>
+				<span style="font-size:14pt" id="b">Nov 2018<br>
+					<b>National Scholarship for Undergraduate Students</b><br>
+					(Highest honor for Chinese undergraduate students)<br>
+				</span>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<br>
 	<hr>
 	<br>
 
@@ -231,17 +286,60 @@
 <script>
 	window.addEventListener('scroll',function(){
 		let tou = document.querySelector('.title');
-		
+		let mytab=document.querySelector('.tab_list');
 	   
 	   /*  tou.classList.toggle("bian",window.scrollY>0); */
 	   if(window.scrollY>0)
 		{
 			tou.classList.add("top_mask");
+			mytab.classList.add("top_mask2");
 		}else{
 			tou.classList.remove("top_mask");
+			mytab.classList.remove("top_mask2");
 		}
 	})
 </script>
+
+<!---------------------menu part code------------------------------->
+
+<script>
+	//获取所有的li元素
+	var lis = document.querySelector(".tab_list").querySelectorAll("li");
+	//获取所有的item元素
+	var items = document.querySelectorAll(".item");
+	//循环给每个li绑定click事件
+	for (var i = 0; i < lis.length; i++) {
+		//给每个li元素添加index属性，第几个index为几
+		lis[i].setAttribute("index", i);
+		//给每个li绑定click事件，点击后出现以下事情
+		lis[i].onclick = function () {
+			//排他思想，将所有的标签样式都去掉
+			for (var j = 0; j < lis.length; j++) {
+				lis[j].className = "";
+			}
+			//样式为空后，设置当前的样式为current
+			this.className = "current";
+			//获取当前所在li的index
+			var index = this.getAttribute("index");
+			//排他思想，将所有的item隐藏
+			for (var k = 0; k < items.length; k++) {
+				//将所有的item设置为display:none
+				items[k].style.display = "none";
+			}
+			//设置当前li下的对应的内容
+			items[index].style.display = "block";
+		}
+	}
+</script>
+<!-- <script>
+	function over(x) {
+	x.style.backgroundColor = "blue";
+	}
+	 
+	function leave(x) {
+	x.style.backgroundColor = "red";
+	}
+   </script> -->
 </body>
 </html>
 
