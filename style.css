@@ -110,6 +110,8 @@ img.rounded {
 
 a:link,a:visited
 {
+    display: block;
+    padding:5px 10px;
     color: #1367a7;
     text-decoration: none;
 }
@@ -213,6 +215,7 @@ li {
   cursor: pointer;
   z-index: 999;
 }
+
 
 /* 设置商品介绍的样式 */
 .current {
